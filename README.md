@@ -66,7 +66,7 @@ Port Status (crossed-out directories are handled by Svelte + MDsveX):
   - [ ] youtube
 - [ ] docs
 - [x] ~~document~~
-- [ ] layouts (Look into MDsveX's layout template support.)
+- [ ] layouts (TODO: Unclear how to incorporate both layouts and themes without hand-multiplexing.)
   - [ ] blog
   - [ ] centered
   - [ ] none
@@ -75,12 +75,12 @@ Port Status (crossed-out directories are handled by Svelte + MDsveX):
   - [ ] multipage
   - [ ] scrollytelling
   - [ ] slideshow
-- [ ] themes
-  - [ ] default
-  - [ ] github
-  - [ ] idyll
-  - [ ] none
-  - [ ] tufte
+- [x] themes (Note: Uses MDsveX's layout support. Must rerun `npm run dev` to change layout.)
+  - [x] default
+  - [x] github
+  - [x] idyll
+  - [x] none
+  - [x] tufte
 
 
 

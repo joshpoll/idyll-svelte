@@ -26,7 +26,13 @@ export default {
       },
       extensions: ['.svelte', '.idyll'],
       preprocess: mdsvex({
-        extension: '.idyll'
+        extension: '.idyll',
+        layout: {
+          github: "./src/themes/github.svelte",
+          idyll: "./src/themes/idyll.svelte",
+          tufte: "./src/themes/tufte.svelte",
+          _: "./src/themes/default.svelte"
+        }
       })
     }),
 
