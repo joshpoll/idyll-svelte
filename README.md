@@ -66,7 +66,7 @@ Port Status (crossed-out directories are handled by Svelte + MDsveX):
   - [ ] youtube
 - [ ] docs
 - [x] ~~document~~
-- [ ] layouts
+- [ ] layouts (Look into MDsveX's layout template support.)
   - [ ] blog
   - [ ] centered
   - [ ] none
