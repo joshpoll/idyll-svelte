@@ -1,3 +1,21 @@
+This repo is a proof-of-concept for porting Idyll to Svelte.
+
+Current Idyll compiles to Markdown + custom syntax to React components and a custom runtime. It also
+hacks in reactive variables. Unfortunately, the hacking does not play well with React components,
+Idyll files are not composable, and the compiler is very brittle and doesn't give good error
+messages.
+
+This port converts Idyll to an EDSL in Svelte + MDsveX. Idyll-Svelte components are composable.
+Svelte handles the reactive runtime and MDsveX handles the Markdown syntax. Idyll-Svelte is
+effectively a component library with nice CSS templates. But don't be fooled by its simplicity! This
+is still a wildly useful product for people (like me) who want to craft explorable explanations and
+other types of interactive articles. In fact, it should be much more pleasant to use in Svelte,
+since Svelte components should "just work" with Idyll-Svelte.
+
+Default Svelte README below:
+
+---
+
 *Looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
 
 ---
