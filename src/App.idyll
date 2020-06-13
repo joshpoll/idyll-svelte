@@ -3,7 +3,10 @@ layout: idyll
 ---
 
 <script>
+  import Case from './components/case.svelte'
+
   export let name;
+  let fooVisible = false;
 </script>
 
 <main>
@@ -13,4 +16,10 @@ layout: idyll
     <a href="https://svelte.dev/tutorial">Svelte tutorial</a>
     to learn how to build Svelte apps.
   </p>
+  <button on:click={() => fooVisible = !fooVisible}>
+    Make foo {#if fooVisible} invisible! {:else} visible! {/if}
+  </button>
+  <Case cond={fooVisible}>
+    foo
+  </Case>
 </main>

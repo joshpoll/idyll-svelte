@@ -22,8 +22,8 @@ Port Status (crossed-out directories are handled by Svelte + MDsveX):
   - [ ] analytics
   - [ ] aside
   - [ ] boolean
-  - [ ] button
-  - [ ] case
+  - [x] button (default Svelte)
+  - [x] case
   - [ ] chart
   - [ ] cite
   - [ ] code-highlight
@@ -66,7 +66,8 @@ Port Status (crossed-out directories are handled by Svelte + MDsveX):
   - [ ] youtube
 - [ ] docs
 - [x] ~~document~~
-- [ ] layouts (TODO: Unclear how to incorporate both layouts and themes without hand-multiplexing.)
+- [ ] layouts (TODO: Might be able to use both layouts and themes by using frontmatter props info to incorporate
+  one into the other.)
   - [ ] blog
   - [ ] centered
   - [ ] none
@@ -79,7 +80,7 @@ Port Status (crossed-out directories are handled by Svelte + MDsveX):
   - [x] default
   - [x] github
   - [x] idyll
-  - [x] none
+  - [x] none (implicit when passed `layout: false`)
   - [x] tufte
 
 
