@@ -12,6 +12,78 @@ is still a wildly useful product for people (like me) who want to craft explorab
 other types of interactive articles. In fact, it should be much more pleasant to use in Svelte,
 since Svelte components should "just work" with Idyll-Svelte.
 
+Port Status (crossed-out directories are handled by Svelte + MDsveX):
+
+- [x] ~~ast~~
+- [ ] cli
+- [x] ~~compiler~~
+- [ ] components
+  - [ ] action
+  - [ ] analytics
+  - [ ] aside
+  - [ ] boolean
+  - [ ] button
+  - [ ] case
+  - [ ] chart
+  - [ ] cite
+  - [ ] code-highlight
+  - [ ] conditional
+  - [ ] default
+  - [ ] desmos
+  - [ ] display
+  - [ ] dynamic
+  - [ ] equation
+  - [ ] fixed
+  - [ ] float
+  - [ ] generateHeaders
+  - [ ] gist
+  - [ ] graphic
+  - [ ] h1
+  - [ ] h2
+  - [ ] h3
+  - [ ] h4
+  - [ ] h5
+  - [ ] h6
+  - [ ] header
+  - [ ] index
+  - [ ] inline
+  - [ ] link
+  - [ ] loop
+  - [ ] preload
+  - [ ] radio
+  - [ ] range
+  - [ ] scroller
+  - [ ] select
+  - [ ] step
+  - [ ] stepper-control
+  - [ ] stepper
+  - [ ] svg
+  - [ ] switch
+  - [ ] table
+  - [ ] text-container
+  - [ ] text-input
+  - [ ] tweet
+  - [ ] youtube
+- [ ] docs
+- [x] ~~document~~
+- [ ] layouts
+  - [ ] blog
+  - [ ] centered
+  - [ ] none
+- [ ] template projects
+  - [ ] article
+  - [ ] multipage
+  - [ ] scrollytelling
+  - [ ] slideshow
+- [ ] themes
+  - [ ] default
+  - [ ] github
+  - [ ] idyll
+  - [ ] none
+  - [ ] tufte
+
+
+
 Default Svelte README below:
 
 ---
