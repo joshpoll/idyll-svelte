@@ -26,7 +26,7 @@ removed in the Svelte version because it's an implementation detail? Or does it 
   - [x] aside
   - [ ] boolean
   - [x] button
-  - [ ] case
+  - [ ] case (TODO: maybe don't implement and wait for Svelte to support?)
   - [ ] chart
   - [ ] cite
   - [ ] code-highlight
@@ -61,7 +61,7 @@ removed in the Svelte version because it's an implementation detail? Or does it 
   - [ ] stepper-control
   - [ ] stepper
   - [x] svg
-  - [ ] switch
+  - [ ] switch (TODO: maybe don't implement and wait for Svelte to support?)
   - [ ] table
   - [ ] text-container
   - [ ] text-input
