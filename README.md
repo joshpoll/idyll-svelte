@@ -23,7 +23,7 @@ removed in the Svelte version because it's an implementation detail? Or does it 
 - [ ] components
   - [x] action
   - [ ] analytics
-  - [ ] aside
+  - [x] aside
   - [ ] boolean
   - [x] button
   - [ ] case
