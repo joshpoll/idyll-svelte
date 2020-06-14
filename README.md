@@ -47,7 +47,7 @@ removed in the Svelte version because it's an implementation detail? Or does it 
   - [x] h4
   - [x] h5
   - [x] h6
-  - [ ] header
+  - [x] header
   - [ ] index
   - [x] inline
   - [ ] link

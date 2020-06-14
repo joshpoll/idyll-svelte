@@ -10,6 +10,7 @@ layout: idyll
   import Display from './components/display.svelte'
   import Fixed from './components/fixed.svelte'
   import Float from './components/float.svelte'
+  import Header from './components/header.svelte'
   import Inline from './components/inline.svelte'
   import Range from './components/range.svelte'
   import Select from './components/select.svelte'
@@ -19,6 +20,9 @@ layout: idyll
   let val = 10;
   let selectVal = "test1";
 </script>
+
+<Header title="The Title of my Article" subtitle="The subtitle of my article" author="Matthew Conlen"
+  authorLink="https://github.com/mathisonian/" />
 
 # Hello {name}!
 
