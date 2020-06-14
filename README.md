@@ -26,11 +26,11 @@ removed in the Svelte version because it's an implementation detail? Or does it 
   - [ ] aside
   - [ ] boolean
   - [x] button
-  - [x] case
+  - [ ] case
   - [ ] chart
   - [ ] cite
   - [ ] code-highlight
-  - [ ] conditional
+  - [x] conditional
   - [ ] default
   - [ ] desmos
   - [x] display (TODO: figure out what the extra stuff is for and port over if needed)

@@ -5,7 +5,7 @@ layout: idyll
 <script>
   import Action from './components/action.svelte'
   import Button from './components/button.svelte'
-  import Case from './components/case.svelte'
+  import Conditional from './components/conditional.svelte'
   import Display from './components/display.svelte'
   import Fixed from './components/fixed.svelte'
   import Float from './components/float.svelte'
@@ -28,9 +28,9 @@ will appear.
 <Button on:click={()=> fooVisible = !fooVisible}>
   Make foo {#if fooVisible} invisible! {:else} visible! {/if}
 </Button>
-<Case cond={fooVisible}>
+<Conditional cond={fooVisible}>
   foo
-</Case>
+</Conditional>
 
 <br>
 <br>
