@@ -38,15 +38,15 @@ removed in the Svelte version because it's an implementation detail? Or does it 
   - [ ] equation
   - [x] fixed
   - [x] float
-  - [ ] generateHeaders
+  - [x] generateHeaders (TODO: I don't think the id is user facing so it can be ignored?)
   - [ ] gist
   - [ ] graphic
-  - [ ] h1
-  - [ ] h2
-  - [ ] h3
-  - [ ] h4
-  - [ ] h5
-  - [ ] h6
+  - [x] h1
+  - [x] h2
+  - [x] h3
+  - [x] h4
+  - [x] h5
+  - [x] h6
   - [ ] header
   - [ ] index
   - [x] inline
