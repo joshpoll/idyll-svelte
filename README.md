@@ -14,6 +14,9 @@ since Svelte components should "just work" with Idyll-Svelte.
 
 Port Status (crossed-out directories are handled by Svelte + MDsveX):
 
+TODO: some of these components use `onChange` internally, but don't expose externally? Can this be
+removed in the Svelte version because it's an implementation detail? Or does it affect the API?
+
 - [x] ~~ast~~
 - [ ] cli
 - [x] ~~compiler~~
@@ -53,7 +56,7 @@ Port Status (crossed-out directories are handled by Svelte + MDsveX):
   - [ ] radio
   - [x] range
   - [ ] scroller
-  - [ ] select
+  - [x] select
   - [ ] step
   - [ ] stepper-control
   - [ ] stepper

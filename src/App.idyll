@@ -10,10 +10,12 @@ layout: idyll
   import Fixed from './components/fixed.svelte'
   import Float from './components/float.svelte'
   import Range from './components/range.svelte'
+  import Select from './components/select.svelte'
 
   export let name;
   let fooVisible = false;
   let val = 10;
+  let selectVal = "test1";
 </script>
 
 # Hello {name}!
@@ -33,16 +35,21 @@ will appear.
 <br>
 <br>
 
-<Display value={{foo: "bar"}}></Display>
+<Display value={{foo: "bar"}} />
 <br>
-<Display value={true}></Display>
+<Display value={true} />
 <br>
-<Display value={5.3135}></Display>
+<Display value={5.3135} />
 <br>
-<Display value={val}></Display>
+<Display value={val} />
 
 <Fixed>This is a fixed component!</Fixed>
 
 <Float position="right">This is a floating component!</Float>
 
 <Range bind:value={val} />
+
+<br>
+
+<Select bind:value={selectVal} options={["test1", "test2"]} />
+<Display value={selectVal} />
