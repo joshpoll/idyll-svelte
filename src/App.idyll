@@ -10,6 +10,7 @@ layout: idyll
   import Display from './components/display.svelte'
   import Fixed from './components/fixed.svelte'
   import Float from './components/float.svelte'
+  import Inline from './components/inline.svelte'
   import Range from './components/range.svelte'
   import Select from './components/select.svelte'
 
@@ -58,3 +59,10 @@ will appear.
 
 <Select bind:value={selectVal} options={["test1", "test2"]} />
 <Display value={selectVal} />
+
+<Inline>
+  This button is inline!
+  <Button on:click={()=> fooVisible = !fooVisible}>
+    Make foo {#if fooVisible} invisible! {:else} visible! {/if}
+  </Button>
+</Inline>

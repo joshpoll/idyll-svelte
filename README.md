@@ -49,7 +49,7 @@ removed in the Svelte version because it's an implementation detail? Or does it 
   - [ ] h6
   - [ ] header
   - [ ] index
-  - [ ] inline
+  - [x] inline
   - [ ] link
   - [x] loop (Svelte `each` blocks)
   - [ ] preload
