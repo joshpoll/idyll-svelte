@@ -30,11 +30,11 @@ Port Status (crossed-out directories are handled by Svelte + MDsveX):
   - [ ] conditional
   - [ ] default
   - [ ] desmos
-  - [ ] display
+  - [x] display (TODO: figure out what the extra stuff is for and port over if needed)
   - [ ] dynamic
   - [ ] equation
-  - [ ] fixed
-  - [ ] float
+  - [x] fixed
+  - [x] float
   - [ ] generateHeaders
   - [ ] gist
   - [ ] graphic

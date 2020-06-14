@@ -6,9 +6,13 @@ layout: idyll
   import Action from './components/action.svelte'
   import Button from './components/button.svelte'
   import Case from './components/case.svelte'
+  import Display from './components/display.svelte'
+  import Fixed from './components/fixed.svelte'
+  import Float from './components/float.svelte'
 
   export let name;
   let fooVisible = false;
+  let val = 10;
 </script>
 
 # Hello {name}!
@@ -24,3 +28,18 @@ will appear.
 <Case cond={fooVisible}>
   foo
 </Case>
+
+<br>
+<br>
+
+<Display value={{foo: "bar"}}></Display>
+<br>
+<Display value={true}></Display>
+<br>
+<Display value={5.3135}></Display>
+<br>
+<Display value={"foobar"}></Display>
+
+<Fixed>This is a fixed component!</Fixed>
+
+<Float position="right">This is a floating component!</Float>
