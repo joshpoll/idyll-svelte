@@ -69,21 +69,20 @@ removed in the Svelte version because it's an implementation detail? Or does it 
   - [ ] youtube
 - [ ] docs
 - [x] ~~document~~
-- [ ] layouts (TODO: Might be able to use both layouts and themes by using frontmatter props info to incorporate
-  one into the other.)
-  - [ ] blog
-  - [ ] centered
-  - [ ] none
+- [x] layouts
+  - [x] blog
+  - [x] centered
+  - [x] none (when layout is undefined)
 - [ ] template projects
   - [ ] article
   - [ ] multipage
   - [ ] scrollytelling
   - [ ] slideshow
-- [x] themes (Note: Uses MDsveX's layout support. Must rerun `npm run dev` to change layout.)
-  - [x] default
+- [x] themes
+  - [x] default (when no theme is undefined)
   - [x] github
   - [x] idyll
-  - [x] none (implicit when passed `layout: false`)
+  - [x] none (when passed `theme: false`)
   - [x] tufte
 
 

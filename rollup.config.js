@@ -27,11 +27,11 @@ export default {
       extensions: ['.svelte', '.idyll'],
       preprocess: mdsvex({
         extension: '.idyll',
+        /* hack to allow layout variable to serve as any other piece of frontmatter */
         layout: {
-          github: "./src/themes/github.svelte",
-          idyll: "./src/themes/idyll.svelte",
-          tufte: "./src/themes/tufte.svelte",
-          _: "./src/themes/default.svelte"
+          blog: "./src/layout.svelte",
+          centered: "./src/layout.svelte",
+          _: "./src/layout.svelte",
         }
       })
     }),
