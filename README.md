@@ -51,7 +51,7 @@ removed in the Svelte version because it's an implementation detail? Or does it 
   - [ ] index
   - [ ] inline
   - [ ] link
-  - [ ] loop
+  - [x] loop (Svelte `each` blocks)
   - [ ] preload
   - [ ] radio
   - [x] range
