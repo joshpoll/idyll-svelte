@@ -2,12 +2,12 @@
   export let cond;
 </script>
 
-{#if cond}
-  <div>
+{#if !cond}
+  <div style="display: none">
     <slot />
   </div>
 {:else}
-  <div style="display: none">
+  <div>
     <slot />
   </div>
 {/if}

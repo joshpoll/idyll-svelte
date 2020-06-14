@@ -14,6 +14,7 @@ layout: idyll
   import Inline from './components/inline.svelte'
   import Range from './components/range.svelte'
   import Select from './components/select.svelte'
+  import SVG from './components/svg.svelte'
 
   export let name;
   let fooVisible = false;
@@ -70,3 +71,5 @@ will appear.
     Make foo {#if fooVisible} invisible! {:else} visible! {/if}
   </Button>
 </Inline>
+
+<SVG src={"https://upload.wikimedia.org/wikipedia/commons/f/fd/Ghostscript_Tiger.svg"} />

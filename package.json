@@ -20,6 +20,7 @@
     "d3-drag": "^1.2.5",
     "d3-format": "^1.4.4",
     "d3-selection": "^1.4.1",
-    "sirv-cli": "^0.4.4"
+    "sirv-cli": "^0.4.4",
+    "svelte-inline-svg": "^1.0.0"
   }
 }

@@ -60,7 +60,7 @@ removed in the Svelte version because it's an implementation detail? Or does it 
   - [ ] step
   - [ ] stepper-control
   - [ ] stepper
-  - [ ] svg
+  - [x] svg
   - [ ] switch
   - [ ] table
   - [ ] text-container
