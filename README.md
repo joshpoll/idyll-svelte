@@ -51,7 +51,7 @@ Port Status (crossed-out directories are handled by Svelte + MDsveX):
   - [ ] loop
   - [ ] preload
   - [ ] radio
-  - [ ] range
+  - [x] range
   - [ ] scroller
   - [ ] select
   - [ ] step

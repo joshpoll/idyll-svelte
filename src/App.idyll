@@ -9,6 +9,7 @@ layout: idyll
   import Display from './components/display.svelte'
   import Fixed from './components/fixed.svelte'
   import Float from './components/float.svelte'
+  import Range from './components/range.svelte'
 
   export let name;
   let fooVisible = false;
@@ -38,8 +39,10 @@ will appear.
 <br>
 <Display value={5.3135}></Display>
 <br>
-<Display value={"foobar"}></Display>
+<Display value={val}></Display>
 
 <Fixed>This is a fixed component!</Fixed>
 
 <Float position="right">This is a floating component!</Float>
+
+<Range bind:value={val} />
