@@ -18,11 +18,11 @@ Port Status (crossed-out directories are handled by Svelte + MDsveX):
 - [ ] cli
 - [x] ~~compiler~~
 - [ ] components
-  - [ ] action
+  - [x] action
   - [ ] analytics
   - [ ] aside
   - [ ] boolean
-  - [x] button (default Svelte)
+  - [x] button
   - [x] case
   - [ ] chart
   - [ ] cite

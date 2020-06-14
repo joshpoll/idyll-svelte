@@ -3,23 +3,24 @@ layout: idyll
 ---
 
 <script>
+  import Action from './components/action.svelte'
+  import Button from './components/button.svelte'
   import Case from './components/case.svelte'
 
   export let name;
   let fooVisible = false;
 </script>
 
-<main>
-  <h1>Hello {name}!</h1>
-  <p>
-    Visit the
-    <a href="https://svelte.dev/tutorial">Svelte tutorial</a>
-    to learn how to build Svelte apps.
-  </p>
-  <button on:click={() => fooVisible = !fooVisible}>
-    Make foo {#if fooVisible} invisible! {:else} visible! {/if}
-  </button>
-  <Case cond={fooVisible}>
-    foo
-  </Case>
-</main>
+# Hello {name}!
+
+Visit the [Svelte tutorial](https://svelte.dev/tutorial) to learn how to build Svelte apps.
+
+This is regular text, but when you <Action on:click="{() => alert('clicked the text')}"> click me </Action> an alert
+will appear.
+
+<Button on:click={()=> fooVisible = !fooVisible}>
+  Make foo {#if fooVisible} invisible! {:else} visible! {/if}
+</Button>
+<Case cond={fooVisible}>
+  foo
+</Case>
