@@ -17,6 +17,7 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
+    "@sveltejs/svelte-scroller": "^2.0.6",
     "d3-drag": "^1.2.5",
     "d3-format": "^1.4.4",
     "d3-selection": "^1.4.1",

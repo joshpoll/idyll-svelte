@@ -17,6 +17,8 @@ Port Status (crossed-out directories are handled by Svelte + MDsveX):
 TODO: some of these components use `onChange` internally, but don't expose externally? Can this be
 removed in the Svelte version because it's an implementation detail? Or does it affect the API?
 
+TODO: Use TypeScript
+
 - [x] ~~ast~~
 - [ ] cli
 - [x] ~~compiler~~
@@ -55,7 +57,7 @@ removed in the Svelte version because it's an implementation detail? Or does it 
   - [ ] preload
   - [ ] radio
   - [x] range
-  - [ ] scroller
+  - [x] scroller (TODO: Currently just uses Svelte's Scroller, but could be wrapped.)
   - [x] select
   - [ ] step
   - [ ] stepper-control

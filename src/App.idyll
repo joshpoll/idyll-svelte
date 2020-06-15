@@ -13,15 +13,36 @@ theme: tufte
   import Float from './components/float.svelte'
   import Header from './components/header.svelte'
   import Inline from './components/inline.svelte'
+  import LoremIpsum from './components/LoremIpsum.svelte';
   import Range from './components/range.svelte'
   import Select from './components/select.svelte'
   import SVG from './components/svg.svelte'
+  import Scroller from "@sveltejs/svelte-scroller";
 
   export let name;
   let fooVisible = false;
   let val = 10;
   let selectVal = "test1";
+
+  /* scroller vars */
+  let count;
+  let index;
+  let offset;
+  let progress;
+  let top = 0.1;
+  let threshold = 0.5;
+  let bottom = 0.9;
 </script>
+
+<style>
+  section {
+    height: 80vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 1em;
+    margin: 0 0 2em 0;
+  }
+</style>
 
 <Header title="The Title of my Article" subtitle="The subtitle of my article" author="Matthew Conlen"
   authorLink="https://github.com/mathisonian/" />
@@ -74,3 +95,48 @@ will appear.
 </Inline>
 
 <SVG src={"https://upload.wikimedia.org/wikipedia/commons/f/fd/Ghostscript_Tiger.svg"} />
+
+<Scroller
+{top}
+{threshold}
+{bottom}
+bind:count
+bind:index
+bind:offset
+bind:progress>
+  <div slot="background">
+    <p>
+      current section:
+      <strong>{index + 1}/{count}</strong>
+    </p>
+    <progress value={count ? (index + 1) / count : 0} />
+
+    <p>offset in current section</p>
+    <progress value={offset || 0} />
+
+    <p>total progress</p>
+    <progress value={progress || 0} />
+  </div>
+
+  <div slot="foreground" style="padding: 0 0 0 50%;">
+    <section>
+      <LoremIpsum />
+    </section>
+    
+    <section>
+      <LoremIpsum />
+    </section>
+
+    <section>
+      <LoremIpsum />
+    </section>
+
+    <section>
+      <LoremIpsum />
+    </section>
+  </div>
+</Scroller>
+
+<section>
+  <LoremIpsum />
+</section>
