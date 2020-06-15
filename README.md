@@ -57,7 +57,8 @@ TODO: Use TypeScript
   - [ ] preload
   - [ ] radio
   - [x] range
-  - [x] scroller (TODO: Currently just uses Svelte's Scroller, but could be wrapped.)
+  - [x] scroller (TODO: Currently just uses Svelte's Scroller, but could be wrapped. Also needs
+    proper CSS)
   - [x] select
   - [ ] step
   - [ ] stepper-control
