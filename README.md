@@ -24,25 +24,25 @@ TODO: Use TypeScript
 - [x] ~~compiler~~
 - [ ] components
   - [x] action
-  - [ ] analytics
+  - [ ] analytics (medium)
   - [x] aside
-  - [ ] boolean
+  - [ ] boolean (easy)
   - [x] button
   - [ ] case (TODO: maybe don't implement and wait for Svelte to support?)
-  - [ ] chart
+  - [ ] chart (medium/hard)
   - [ ] cite
-  - [ ] code-highlight
+  - [ ] code-highlight (medium/hard. use Prism?)
   - [x] conditional
-  - [ ] default
-  - [ ] desmos
+  - [ ] default (easy)
+  - [ ] desmos (medium)
   - [x] display (TODO: figure out what the extra stuff is for and port over if needed)
-  - [ ] dynamic
-  - [ ] equation
+  - [ ] dynamic (medium-hard)
+  - [ ] equation (medium-hard)
   - [x] fixed
   - [x] float
   - [x] generateHeaders (TODO: I don't think the id is user facing so it can be ignored?)
-  - [ ] gist
-  - [ ] graphic
+  - [ ] gist (medium)
+  - [ ] graphic (not needed?)
   - [x] h1
   - [x] h2
   - [x] h3
@@ -52,24 +52,24 @@ TODO: Use TypeScript
   - [x] header
   - [ ] index
   - [x] inline
-  - [ ] link
+  - [ ] link (easy)
   - [x] loop (Svelte `each` blocks)
-  - [ ] preload
-  - [ ] radio
+  - [ ] preload (easy-medium)
+  - [ ] radio (easy)
   - [x] range
   - [x] scroller (TODO: Currently just uses Svelte's Scroller, but could be wrapped. Also needs
     proper CSS)
   - [x] select
-  - [ ] step
-  - [ ] stepper-control
-  - [ ] stepper
+  - [ ] step (easy-medium)
+  - [ ] stepper-control (easy)
+  - [ ] stepper (medium-hard)
   - [x] svg
   - [ ] switch (TODO: maybe don't implement and wait for Svelte to support?)
-  - [ ] table
-  - [ ] text-container
-  - [ ] text-input
-  - [ ] tweet
-  - [ ] youtube
+  - [ ] table (medium/hard)
+  - [ ] text-container (easy? not sure how it's used)
+  - [ ] text-input (easy)
+  - [ ] tweet (medium)
+  - [ ] youtube (easy)
 - [ ] docs
 - [x] ~~document~~
 - [x] layouts
