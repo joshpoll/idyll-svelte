@@ -26,7 +26,7 @@ export { default as Inline } from './components/inline.svelte';
 export { default as Range } from './components/range.svelte';
 // export { default as Scroller } from './components/scroller.svelte';
 export { default as Select } from './components/select.svelte';
-// export { default as Step } from './components/step.svelte';
+export { default as Step } from './components/step.svelte';
 // export { default as Stepper } from './components/stepper.svelte';
 // export { default as StepperControl } from './components/stepper-control.svelte';
 export { default as SVG } from './components/svg.svelte';

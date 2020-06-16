@@ -1,5 +1,6 @@
 <script>
   import Scroller from "@sveltejs/svelte-scroller";
+  import Step from "./components/step.svelte";
 
   /* scroller vars */
   let count;
@@ -40,13 +41,13 @@
   </div>
   <div slot="foreground" class="idyll-text-container" style="max-width:600px;margin-top:0;margin-right:auto;margin-bottom:0;margin-left:auto">
     <div class="idyll-scroll-text">
-    <section class="idyll-step">
+    <Step>
       <p>The **bar** on the right belongs to this first Scroller component.</p>
 
       Let's first look at how we can animate **within** a Scroller. Watch how it rotates
       as you move to the next step.
-    </section>
-    <section class="idyll-step">
+    </Step>
+    <Step>
       <p>We've reached the next step! You can animate a graphic within a particular Scroller based on what step is
         entered.</p>
 
@@ -68,8 +69,8 @@
       [/Scroller]
       ``` -->
 
-    </section>
-    <section class="idyll-step">
+    </Step>
+    <Step>
 
       Now we can write some basic transformations in the <span class="emphasize">style.css</span>
       file to reflect the
@@ -96,14 +97,14 @@ transform: rotate(210deg);
 
 ```
 
-    </section>
+    </Step>
 
-    <section class="idyll-step">
+    <Step>
       <p>But let's say you want to include another graphic. We could stay here on this Scroller but it would
         get a little messy... </p>
 
       So let's **stack**!
-    </section>
+    </Step>
   </div>
   </div>
 </Scroller>
