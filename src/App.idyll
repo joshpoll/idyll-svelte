@@ -1,142 +1,295 @@
 ---
 layout: centered
-theme: tufte
+theme: github
 ---
 
 <script>
-  import Action from './components/action.svelte'
-  import Aside from './components/aside.svelte'
-  import Button from './components/button.svelte'
-  import Conditional from './components/conditional.svelte'
-  import Display from './components/display.svelte'
-  import Fixed from './components/fixed.svelte'
-  import Float from './components/float.svelte'
-  import Header from './components/header.svelte'
-  import Inline from './components/inline.svelte'
-  import LoremIpsum from './components/LoremIpsum.svelte';
-  import Range from './components/range.svelte'
-  import Select from './components/select.svelte'
-  import SVG from './components/svg.svelte'
-  import Scroller from "@sveltejs/svelte-scroller";
-
-  export let name;
-  let fooVisible = false;
-  let val = 10;
-  let selectVal = "test1";
-
-  /* scroller vars */
-  let count;
-  let index;
-  let offset;
-  let progress;
-  let top = 0.1;
-  let threshold = 0.5;
-  let bottom = 0.9;
+  import Header from './components/header.svelte';
+  import Scroller1 from './Scroller1.idyll';
+  import Scroller2 from './Scroller2.idyll';
 </script>
 
 <style>
-  section {
-    height: 80vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 1em;
-    margin: 0 0 2em 0;
+  /* Formatting text portion for tutorial */
+  :global(.gif) {
+    margin-top: 3vh;
+    width: 60vw;
+  }
+
+  :global(.article-header) {
+    margin-top: 15vh;
+    margin-bottom: 30px;
+  }
+
+  :global(.line) {
+    background-color: black;
+    height: 0.10em;
+    margin-bottom: 4vh;
+  }
+
+  :global(.arrow) {
+    transform: scale(0.5);
+  }
+
+  :global(.idyll-text-container) {
+    width: 90vw;
+    max-width: 80vw !important;
+    /* so not restricted to 600px */
+  }
+
+  /* Center imgs */
+  :global(.gif),
+  :global(.arrow),
+  :global(figcaption) {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Some text and pre formatting */
+  :global(a) {
+    color: #5BAFC1;
+    text-decoration: underline;
+  }
+
+  :global(figcaption) {
+    max-width: 30vw;
+    text-align: center;
+  }
+
+  :global(figcaption p) {
+    font-size: 0.8em !important;
+  }
+
+  :global(h1),
+  :global(h2),
+  :global(h3) {
+    font-family: Verdana, Geneva, sans-serif;
+  }
+
+  :global(h1) {
+    font-size: 2.5em;
+  }
+
+  :global(h2) {
+    font-size: 1.5em;
+    color: #5BAFC1;
+  }
+
+  :global(h3) {
+    font-size: 1.3em;
+  }
+
+  :global(.byline) {
+    font-size: 0.9em;
+  }
+
+  :global(.text p),
+  :global(.idyll-step) {
+    font-family: 'Open Sans', Verdana, Geneva, sans-serif;
+    font-size: 14px;
+  }
+
+
+
+  :global(.emphasize) {
+    background-color: rgb(248, 241, 201);
+    color: black;
+    font-weight: bold;
+    font-size: 0.9em;
+    padding: 0.25em;
+  }
+
+  :global(.highlight pre),
+  :global(.code pre) {
+    height: 50vh;
+  }
+
+  :global(.idyll-root) {
+    box-sizing: border-box;
+    margin: 0 0;
+    padding: 0;
+    margin-bottom: 60px;
+  }
+
+  /* Some formatting for the scroll and step boxes */
+  :global(.idyll-scroll) {
+    margin-top: 0;
+    width: 100vw;
+  }
+
+  /* Move the steps up and shorten them */
+  :global(.idyll-scroll-text .idyll-step) {
+    max-width: 45vw;
+    position: relative;
+    top: -150vh;
+    padding: 4vw;
+  }
+
+
+  /* CSS for scroller portion of tutorial to follow along */
+  :global(.bar),
+  :global(.circle) {
+    margin-left: 45vw;
+    background: transparent;
+    transition: 400ms linear all;
+  }
+
+  /* Decrease the margin depending on window size for steps */
+  @media only screen and (min-width: 600px) {
+    :global(.gif) {
+      width: 40vw;
+    }
+
+    :global(.idyll-scroll-text .idyll-step) {
+      padding: 2vw;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+
+    :global(.bar),
+    :global(.circle) {
+      margin-left: 68vw;
+    }
+
+    :global(.text p),
+    :global(.idyll-step) {
+      font-size: 15px;
+    }
+
+    :global(.idyll-scroll-text .idyll-step) {
+      max-width: 40vw;
+    }
+
+    :global(.idyll-text-container) {
+      width: 45vw;
+    }
+  }
+
+  @media only screen and (min-width: 2000px) {
+
+    :global(.bar),
+    :global(.circle) {
+      margin-left: 75vw;
+    }
+
+    :global(.text p),
+    :global(.idyll-step),
+    :global(p) {
+      font-size: 25px;
+    }
+
+    :global(pre) {
+      font-size: 20px;
+    }
+
+    :global(h1) {
+      font-size: 2.7em;
+    }
+
+    :global(h2) {
+      font-size: 1.7em;
+    }
+
+    :global(h3) {
+      font-size: 1.5em;
+    }
   }
 </style>
 
-<Header title="The Title of my Article" subtitle="The subtitle of my article" author="Matthew Conlen"
-  authorLink="https://github.com/mathisonian/" />
+<Header title="Stacking Scroller Components" subtitle="Introduction to leveraging multiple Scrollers in Idyll"
+  author="Megan Vo" authorLink="https://github.com/megan-vo" />
 
-# Hello {name}!
+<div class="line" />
+<br />
 
-Visit the [Svelte tutorial](https://svelte.dev/tutorial) to learn how to build Svelte apps.
+<div class="text">
+  <p><a href="https://idyll-lang.org/" target="_blank">Idyll's</a> Scroller component is a useful way to incorporate
+    more narrative structure into an article. As its name suggests, it provides a scroll-based presentation layout
+    that can manipulate graphics upon each "step" that is entered.</p>
 
-This is regular text, but when you <Action on:click="{() => alert('clicked the text')}"> click me </Action> an alert
-will appear.
+  This tutorial will focus on introducing <span class="emphasize">multiple Scroller components</span> in one Idyll
+  document to further aid your scrollytelling needs. If you are not familiar with Idyll's Scrollers, take a peek at
+  this
+  <a href="https://idyll-lang.org/gallery/scaffolding-interactives" target="_blank">tutorial</a> first. Otherwise,
+  let's get
+  started!
 
-<Aside>
-  I'm an aside!
-</Aside>
+  <br />
 
-<Button on:click={()=> fooVisible = !fooVisible}>
-  Make foo {#if fooVisible} invisible! {:else} visible! {/if}
-</Button>
-<Conditional cond={fooVisible}>
-  foo
-</Conditional>
+  ### What are Stacked Scrollers?
+  Instead of one Scroller component per document, stacking Scrollers simply translates to
+  declaring multiple Scroller components one after another. This way, each Scroller can be thought of as its own
+  section with steps that only it can control.
 
-<br>
-<br>
+  <br />
 
-<Display value={{foo: "bar"}} />
-<br>
-<Display value={true} />
-<br>
-<Display value={5.3135} />
-<br>
-<Display value={val} />
+  ### Why Stack?
+  Stacking allows us to easily transition between the different graphics of each component. Take for example,
+  the smooth transitions between the graphics of the article below.
 
-<Fixed>This is a fixed component!</Fixed>
+  <figure>
+    <img src="/images/fugazi.gif" class="gif" />
+    <figcaption>
+      <a href="https://idyll-lang.org/gallery/the-d-i-y-data-of-fugazi" target="_blank">The D-I-Y Data of Fugazi</a>
+      by Matthew Conlen.
+    </figcaption>
+  </figure>
+  <p>With stacking, the graphic of each Scroller slides up and replaces the previous
+    one on the screen -- and quite easily too. Since each Scroller component only allows
+    for one graphic, switching between them is a bit more difficult and
+    clunky when using just one Scroller.</p>
 
-<Float position="right">This is a floating component!</Float>
+  Perhaps one of the biggest perks is that stacking lets us include multiple animated graphics per document because
+  each Scroller
+  controls their *own* set of steps. This also gives us greater customizeability
+  in terms of style and functionality since every Scroller has a corresponding <span class="emphasize">id</span>.
 
-<Range bind:value={val} />
+  <br />
 
-<br>
+  ### Let's Build Something
+  To get acquainted with stacked scrolling, below is a short example of customizing each
+  of the stacked Scroller components.
+  For this example, we've made changes to the <span class="emphasize">styles.css</span> and <span class="emphasize">
+    index.idyll</span> files.
+  <!-- No idea why code block isn't working. It works in MDsveX example... -->
+  Also in the <span class="emphasize">package.json</span> file, we have switched to the `layout: centered`
+  format.
 
-<Select bind:value={selectVal} options={["test1", "test2"]} />
-<Display value={selectVal} />
+  <img src="/images/arrow.svg" class="arrow" />
+</div>
 
-<Inline>
-  This button is inline!
-  <Button on:click={()=> fooVisible = !fooVisible}>
-    Make foo {#if fooVisible} invisible! {:else} visible! {/if}
-  </Button>
-</Inline>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
-<SVG src={"https://upload.wikimedia.org/wikipedia/commons/f/fd/Ghostscript_Tiger.svg"} />
+<!-- Scroller Tutorial -->
+<Scroller1 />
+<!-- Second Scroller -->
+<Scroller2 />
 
-<Scroller
-{top}
-{threshold}
-{bottom}
-bind:count
-bind:index
-bind:offset
-bind:progress>
-  <div slot="background">
-    <p>
-      current section:
-      <strong>{index + 1}/{count}</strong>
-    </p>
-    <progress value={count ? (index + 1) / count : 0} />
+<br />
 
-    <p>offset in current section</p>
-    <progress value={offset || 0} />
+### Final Notes
 
-    <p>total progress</p>
-    <progress value={progress || 0} />
-  </div>
+<!-- Link to docs -->
+<p>Interested in exploring more? <span class="emphasize">Idyll's Docs</span> has information on all the 
+<a href="https://idyll-lang.org/docs/components" target="_blank">built-in components</a>
+including the Scroller. If you're looking to get started somewhere, 
+<a href="https://idyll-lang.org/docs/getting-started" target="_blank">this page</a> in the Docs will 
+help you get set up.</p>
 
-  <div slot="foreground" style="padding: 0 0 0 50%;">
-    <section>
-      <LoremIpsum />
-    </section>
-    
-    <section>
-      <LoremIpsum />
-    </section>
-
-    <section>
-      <LoremIpsum />
-    </section>
-
-    <section>
-      <LoremIpsum />
-    </section>
-  </div>
-</Scroller>
-
-<section>
-  <LoremIpsum />
-</section>
+<!-- Custom components -->
+Note that you can apply the same Scroller concepts from the CSS example above to control custom JavaScript 
+components as well in Idyll. Check out the <a href="https://idyll-lang.org/docs/components/custom" target="_blank">custom 
+components</a> page on how to incorporate those into your Idyll document.

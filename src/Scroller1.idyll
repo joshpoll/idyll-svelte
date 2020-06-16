@@ -1,0 +1,109 @@
+<script>
+  import Scroller from "@sveltejs/svelte-scroller";
+
+  /* scroller vars */
+  let count;
+  let barStep;
+  let offset;
+  let progress;
+  let top = 0.1;
+  let threshold = 0.5;
+  let bottom = 0.9;
+</script>
+
+<style>
+  .idyll-scroll-graphic {
+    background: rgb(241, 239, 224);
+  }
+
+  .bar {
+    width: 25vw;
+    height: 10vh;
+  }
+
+  .rotate1 {
+    transform: rotate(90deg);
+  }
+
+  .rotate2 {
+    transform: rotate(210deg);
+  }
+</style>
+
+<Scroller class="idyll-scroll" {top} {threshold} {bottom} bind:count bind:index={barStep} bind:offset bind:progress>
+  <div slot="background" class="idyll-scroll-graphic"
+  style="height:100vh;top:0;left:0;right:0;bottom:auto;width:100%;transform:translate3d(0, 0,
+  0);z-index:-1">
+    <div style="width: 1680px; position: absolute; left: 0px; right: 0px; top: 50%; transform: translateY(-50%);">
+    <img src="/images/bar.svg" class={barStep===0 ? "bar" : "bar rotate" + barStep} />
+  </div>
+  </div>
+  <div slot="foreground" class="idyll-text-container" style="max-width:600px;margin-top:0;margin-right:auto;margin-bottom:0;margin-left:auto">
+    <div class="idyll-scroll-text">
+    <section class="idyll-step">
+      <p>The **bar** on the right belongs to this first Scroller component.</p>
+
+      Let's first look at how we can animate **within** a Scroller. Watch how it rotates
+      as you move to the next step.
+    </section>
+    <section class="idyll-step">
+      <p>We've reached the next step! You can animate a graphic within a particular Scroller based on what step is
+        entered.</p>
+
+      To keep track of the current step you are in, you can assign a variable to the Scroller's
+      `currentStep` prop and tie it to your graphic:
+
+      <!-- ```
+      [var name:"barStep" value:0 /]
+      [Scroller currentStep:barStep]
+      [Graphic]
+      [img src:"static/images/bar.svg"
+      className:`barStep === 0 ? "bar" :
+      "bar rotate" + barStep `/]
+      [/Graphic]
+
+      [Step]
+      ...
+      [/Step]
+      [/Scroller]
+      ``` -->
+
+    </section>
+    <section class="idyll-step">
+
+      Now we can write some basic transformations in the <span class="emphasize">style.css</span>
+      file to reflect the
+      `barStep` prop updates:
+
+<!-- Note! code blocks CANNOT be indented -->
+```css
+
+.bar {
+margin-left: 42vw;
+background: transparent;
+width: 25vw;
+height: 10vh;
+transition: 400ms linear all;
+}
+
+.rotate1 {
+transform: rotate(90deg);
+}
+
+.rotate2 {
+transform: rotate(210deg);
+}
+
+```
+
+    </section>
+
+    <section class="idyll-step">
+      <p>But let's say you want to include another graphic. We could stay here on this Scroller but it would
+        get a little messy... </p>
+
+      So let's **stack**!
+    </section>
+  </div>
+  </div>
+</Scroller>
